@@ -1,20 +1,20 @@
-package com.imdev.inticorp.dto.request;
+package com.imdev.inticorp.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserContactRequest {
+public class UserContactResponse {
     
-    @JsonProperty("user_id")
-    private String userId;
+    @JsonProperty("id")
+    private String idUserContact;
 
     private String address;
+
+    private String user;
 }

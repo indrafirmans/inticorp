@@ -12,7 +12,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "user_contact")
+@Table(name = "t_user_contact")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -27,6 +27,6 @@ public class UserContactEntity {
     @Column(name = "address")
     private String address;
 
-    @Column(name = "user")
-    private String user;
+    @Column(name = "id_user")
+    private String idUser;
 }
