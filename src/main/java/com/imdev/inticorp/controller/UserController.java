@@ -22,6 +22,8 @@ import com.imdev.inticorp.exception.DuplicateDataException;
 import com.imdev.inticorp.exception.NotDataFoundException;
 import com.imdev.inticorp.service.UserService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping()
 public class UserController {
@@ -30,7 +32,7 @@ public class UserController {
     private UserService userService;
 
     @PostMapping(path = contant.URL_USER)
-    public ResponseEntity<DefaultResponse<UserResponse>> createUser(@RequestBody UserRequest payload)
+    public ResponseEntity<DefaultResponse<UserResponse>> createUser(@Valid @RequestBody UserRequest payload)
             throws Exception, DuplicateDataException {
 
         DefaultResponse<UserResponse> result = new DefaultResponse<>();
